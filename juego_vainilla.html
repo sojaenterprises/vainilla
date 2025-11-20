@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Piedra, Papel o Tijera</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .botones {
+      margin: 20px 0;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #resultado {
+      font-size: 22px;
+      color: #222;
+      margin-top: 30px;
+    }
+
+    .eleccion {
+      font-size: 18px;
+      margin-top: 15px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🪨📄✂️ Piedra, Papel o Tijera</h1>
+
+  <div class="botones">
+    <button onclick="jugar('piedra')">🪨 Piedra</button>
+    <button onclick="jugar('papel')">📄 Papel</button>
+    <button onclick="jugar('tijera')">✂️ Tijera</button>
+  </div>
+
+  <p class="eleccion" id="eleccion"></p>
+  <p id="resultado"></p>
+
+  <script>
+    function jugar(eleccionUsuario) {
+      const opciones = ['piedra', 'papel', 'tijera'];
+      const eleccionComputadora = opciones[Math.floor(Math.random() * 3)];
+      let mensaje = '';
+
+      if (eleccionUsuario === eleccionComputadora) {
+        mensaje = '🤝 Empate. Ambos eligieron ' + eleccionUsuario;
+      } else if (
+        (eleccionUsuario === 'piedra' && eleccionComputadora === 'tijera') ||
+        (eleccionUsuario === 'papel' && eleccionComputadora === 'piedra') ||
+        (eleccionUsuario === 'tijera' && eleccionComputadora === 'papel')
+      ) {
+        mensaje = '🎉 ¡Ganaste! ' + eleccionUsuario + ' vence a ' + eleccionComputadora;
+      } else {
+        mensaje = '💥 Perdiste. ' + eleccionComputadora + ' vence a ' + eleccionUsuario;
+      }
+
+      document.getElementById('eleccion').textContent =
+        'Elegiste: ' + eleccionUsuario + ' | Computadora: ' + eleccionComputadora;
+      document.getElementById('resultado').textContent = mensaje;
+    }
+  </script>
+</body>
+</html>
