@@ -1,6 +1,6 @@
 /*
 =============== 
-Fonts
+Fuentes
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
@@ -12,25 +12,25 @@ Variables
 */
 
 :root {
-  /* dark shades of primary color*/
+  /* tonos oscuros del color primario */
   --clr-primary-1: hsl(205, 86%, 17%);
   --clr-primary-2: hsl(205, 77%, 27%);
   --clr-primary-3: hsl(205, 72%, 37%);
   --clr-primary-4: hsl(205, 63%, 48%);
-  /* primary/main color */
+  /* color primario/principal */
   --clr-primary-5: hsl(205, 78%, 60%);
-  /* lighter shades of primary color */
+  /* tonos más claros del color primario */
   --clr-primary-6: hsl(205, 89%, 70%);
   --clr-primary-7: hsl(205, 90%, 76%);
   --clr-primary-8: hsl(205, 86%, 81%);
   --clr-primary-9: hsl(205, 90%, 88%);
   --clr-primary-10: hsl(205, 100%, 96%);
-  /* darkest grey - used for headings */
+  /* gris más oscuro - usado para encabezados */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
-  /* grey used for paragraphs */
+  /* gris usado para párrafos */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-6: hsl(209, 23%, 60%);
   --clr-grey-7: hsl(211, 27%, 70%);
@@ -53,9 +53,10 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
-Global Styles
+Estilos Globales
 ===============
 */
 
@@ -128,9 +129,9 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
+/*  clases globales */
 
-/* section */
+/* sección */
 .section {
   padding: 5rem 0;
 }
@@ -153,7 +154,7 @@ main {
 
 /*
 =============== 
-Counter
+Contador
 ===============
 */
 
